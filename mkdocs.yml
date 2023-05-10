@@ -1,4 +1,22 @@
 site_name: Docs
+site_description: Documentation for the Cognitive Automation Labs platform
+nav:
+  - 'Overview': 
+      - index.md
+      - 'About us': home/about.md
+      - 'Contributions': home/contributions.md
+      - 'Contact us': home/contact.md
+  - 'Insight':
+      - insight/index.md
+      - 'Getting started': insight/1_getting_started.md
+      - 'Installation': insight/2_installation.md
+      - 'Configuration': insight/3_configuration.md
+  - 'Monitor':
+      - monitor/index.md
+      - 'Getting started': monitor/1_getting_started.md
+      - 'Installation': monitor/2_installation.md
+      - 'Configuration': monitor/3_configuration.md
+
 theme:
   name: material
   # custom_dir: overrides
@@ -11,19 +29,13 @@ theme:
     - navigation.tabs
     - navigation.tracking
     - navigation.path
-    # - navigation.indexes
+    - navigation.indexes
     - navigation.sections
     - content.code.annotation
     - content.code.copy
     - content.tabs.link
     - navigation.footer
-  nav:
-    - Home:
-        - tabs/home/index.md
-    - Insight:
-        - tabs/insight/index.md
-    - Monitor:
-        - tabs/monitor/index.md
+
 
   palette:
     # Palette toggle for light mode

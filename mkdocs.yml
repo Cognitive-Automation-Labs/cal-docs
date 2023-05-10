@@ -1,7 +1,7 @@
 site_name: Docs
 theme:
   name: material
-  custom_dir: overrides
+  # custom_dir: overrides
   logo: img/favicon/cal-fav.png
   favicon: img/favicon/cal-fav.png
   font:
@@ -52,8 +52,8 @@ extra_css:
   - stylesheets/extra.css
 
 extra:
-  version:
-    provider: mike
+  # version:
+  #   provider: mike
   social:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/cognitive-automation-labs/

@@ -1,4 +1,4 @@
-site_name: Docs
+site_name: calab.ai | docs
 site_description: Documentation for the Cognitive Automation Labs platform
 nav:
   - 'Overview': 
@@ -41,8 +41,7 @@ theme:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      theme:
-        logo: img/logo/ca-labs-logo-master.png
+      logo: img/favicon/cal-fav.png
       primary: custom
       accent: custom
       toggle:
@@ -52,8 +51,7 @@ theme:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      theme:
-        logo: img/logo/ca-labs-logo-white.png
+      logo: img/logo/ca-labs-logo-white.png
       primary: custom
       accent: custom
       toggle:

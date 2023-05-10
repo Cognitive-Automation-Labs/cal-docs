@@ -1,5 +1,5 @@
 site_name: calab.ai | docs
-site_description: Documentation for the Cognitive Automation Labs platform
+site_description: Documentation for the Cognitive Automation Labs products and services.
 nav:
   - 'Overview': 
       - index.md

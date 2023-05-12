@@ -36,7 +36,8 @@ Incident categorisations are deemed the highest priority and require timely inte
 
 - **Bot Terminations:** Triggered every 5 minutes when a process has terminated. 
 
-Example of an automatically generated incident notification 
+
+**Figure 1: Example of an automatically generated incident notification**
 
 ### Warnings 
 
@@ -51,7 +52,7 @@ Warnings are deemed a lower priority and may not yield immediate production impa
 - State: Type of state the process job is in (e.g. Pending, Faulted, Running, Completed) 
 - Time Waiting: The amount of time the process job has been in “pending” state (i.e. time between CreationTime and StartTime) 
 
-Example of an automatically generated warning ticket 
+**Figure 2: Example of an automatically generated warning ticket**
 
 #### Predominant Warnings Types 
 
@@ -75,6 +76,8 @@ To add members of your team to a private channel:
 2. Use the Members and Settings tabs to add or remove members and assign roles. Your private channel can have multiple owners and up to 250 members. 
 3. When you’re ready, select Done.  
 
+**Figure 3: Example of how to add members of your team to a monitoring private channel**
+
 ### Creating and Resolving ServiceNow Incident Tickets 
 
 For each Automation Incident, a SNOW ticket will be created. This can then then be actioned using typical SNOW procedure as shown below: 
@@ -91,23 +94,25 @@ Role required: itil, list_updater, sn_incident_write, or admin (for resolution) 
 4. Click Resolve. The incident is in a resolved state. 
 5. Click Close Incident. The incident is closed. 
 
+**Table 1: Example Information Resolution Fields**
+
 ## Monitoring Tool Architecture and Infrastructure 
 
-The Monitoring Tool solution is hosted within the ACU Azure Environment and sits behind the ACU Private Network. To better understand how the solution works, review the architectural diagrams below. If you have any other questions or concerns, please reach out to support@cognitiveautomationlabs.com and we will be happy to assist. 
+The Monitoring Tool solution is hosted within the client tennant and sits behind the clients private Network. To better understand how the solution works, reger to the architectural diagrams below. If you have any other questions or concerns, please reach out to support@cognitiveautomationlabs.com and we will be happy to assist. 
 
 ### Solution Architecture 
 
 The solution is designed to pull data from the applications it monitors, identifies if any anomalies have occurred as described in the code logic, send notifications for warnings and incidents, and create service management tickets for any incidents.  
 
-Monitoring Tool Solution Architecture 
+**Figure 4: Monitoring Tool Solution Architecture** 
 
 ### Network Architecture 
 
 The core networking components of the solution include the ACU On-Prem Network and Azure Backbone. Developers use the Global Protect VPN to access the UiPath Orchestrator for development purposes.  
 
-Once the solution is deployed to the TST or PRD Resource Groups, solution Container Instances will then connect to the UiPath Orchestrators over the ACU private network by using Azure Virtual Networks that have been configured with the appropriate access. Container Images for each solution are stored in the Container Registry that relates to each environment and any secret values for the solutions are stored in the Azure Key Vault of each environment.  
+Once the solution is deployed to the TST or PRD Resource Groups, solution Container Instances will then connect to the solution orchestration repositories over the clients private network by using Azure Virtual Networks that have been configured with the appropriate access. Container Images for each solution are stored in the Container Registry that relates to each environment and any secret values for the solutions are stored in the Azure Key Vault of each environment.  
 
-Monitoring Tool Network Architecture 
+**Figure 5: Monitoring Tool Network Architecture**
 
 ## DevOps Pipelines 
 
@@ -119,7 +124,7 @@ GitHub is used to store the code of the Monitoring Tool solution and to manage C
 
 GitHub Actions with access to deploy resources via the CICD pipelines. If you would like access to the code or to know more about the CICD pipelines, reach out to support@cognitiveautomationlabs.com. 
 
-Developers that wish to make changes or run the code locally first need to have Docker installed and access to the ACU private network via Global Protect VPN. See the solution readme file for more information on this topic. 
+Developers that wish to make changes or run the code locally first need to have Docker installed and access to the clients private network via Global Protect VPN. See the solution readme file for more information on this topic. 
 
 ### Azure Resource Deployment Pipeline 
 
@@ -137,6 +142,6 @@ Branches are managed via three different levels, which include the following:
 - **main:** This branch is used as the primary branch and it also triggers the deployment to the TST Resource Group. When the changes to files in this branch are approved, the CICD pipelines will be triggered and changes will be deployed to the TST Resource Group. 
 - **release:** This branch is used as the Production branch. When the changes to files in this branch are approved, the CICD pipelines will be triggered and changes will be deployed to the PRD Resource Group. 
 
-DevOps Pipelines Architecture 
+**Figure 6: DevOps Pipelines Architecture**
 
 

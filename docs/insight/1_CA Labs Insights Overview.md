@@ -4,7 +4,7 @@ CA Labs Insights has been meticulously crafted to empower our clients in underst
 
 **Figure1: Overview of the CA Labs Insights**
 
-## Related Automation Dashboard Applications
+## Related CA Labs Insights Applications
 
 The client's Enhanced Automation Monitoring tool is specifically designed to be integrated with the following platforms:
 
@@ -31,12 +31,16 @@ To enable holistic automation opportunity and benefit tracking across the client
 The Automation Dashboard Solution has been divided into 4 main views. These are as follows:
 
 1. **CA Labs Executive View**: The Executive view provides an over-arching view that allows for a holistic understanding of the benefits that are being delivered by the client's team.
+**Figure 3: Executive View**
 
 2. **CA Labs Detailed View**: The Detailed view allows for detailed benefit tracking of each individual process that is currently in production providing insights as to how each solution is tracking against the benefits that have been signed off.
+**Figure 4: Detailed View**
 
 3. **CA Labs Operational View**: This view provides an operational lens of automation undertanding allowing the technical team to investigate the detailed operational metrics for each of the emerging technology solutiosn within the clients technology automation stack.
+**Figure 5: Operational View**
 
 4. **CA Labs Insights Insfrastucture & Licensing View**: This view provides insight on the current operational cost of the clients emerging technology ecosystem based on cloud expenditure as well as licensing costing.Additonal information around peak licensing and virtualised machine usage is provided to allow scheduling distribution, allowing for further cost optimisation.  
+**Figure 6: Infrastructure & Licensing View**
 
 ## Summary of Calculated Columns in Automation Dashboard
 
